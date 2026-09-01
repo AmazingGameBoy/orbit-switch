@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Privacy Policy | Orbit Switch</title>
-  <meta name="description" content="Official Privacy Policy for Orbit Switch. Learn how we handle account information, gameplay data, cloud saves, and account deletion.">
+  <meta name="description" content="Official Privacy Policy for Orbit Switch. Learn how we handle account information, gameplay data, cloud saves, leaderboards, and account deletion.">
 
   <style>
     :root {
@@ -256,37 +256,6 @@
       text-decoration: none;
     }
 
-    .table-wrap {
-      overflow-x: auto;
-      margin-top: 18px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 560px;
-    }
-
-    th,
-    td {
-      padding: 14px;
-      text-align: left;
-      border-bottom: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    th {
-      color: var(--text);
-      background: rgba(255, 255, 255, 0.04);
-    }
-
-    tr:last-child td {
-      border-bottom: none;
-    }
-
     footer {
       border-top: 1px solid var(--border);
       padding: 35px 0;
@@ -350,9 +319,7 @@
     </div>
 
 ```
-<a href="delete-account.html" class="nav-link">
-  Delete Account
-</a>
+<a href="delete-account.html" class="nav-link">Delete Account</a>
 ```
 
   </div>
@@ -373,8 +340,8 @@
   </p>
 
   <div class="dates">
-    <div class="date-item">Effective: September 1, 2026</div>
-    <div class="date-item">Last Updated: September 1, 2026</div>
+    <div class="date-item">Effective: September 2, 2026</div>
+    <div class="date-item">Last Updated: September 2, 2026</div>
   </div>
 </div>
 ```
@@ -395,13 +362,13 @@
 
   <p>
     This Privacy Policy explains what information is collected, how it is used,
-    where it may be stored, when certain information may be publicly displayed,
-    and how you can delete your account and associated data.
+    where it may be stored, what information may be publicly displayed, and
+    how you can delete your account and associated data.
   </p>
 
   <div class="highlight">
-    Orbit Switch follows a data-minimization approach. Core gameplay is available
-    in Guest Mode without requiring a cloud-connected account.
+    Orbit Switch follows a data-minimization approach. Core gameplay is
+    available in Guest Mode without requiring a cloud-connected account.
   </div>
 </section>
 
@@ -409,18 +376,29 @@
 <section class="card">
   <h2>2. Information We Collect</h2>
 
-  <h3>Account Identifier</h3>
+  <h3>Account Identifier and Authentication</h3>
+
   <p>
     If you voluntarily sign in using Google Sign-In, authentication is handled
-    through Google Identity services and Supabase Authentication. We use an
-    authenticated user identifier to operate your Orbit Switch cloud account.
+    through Google Identity services and Supabase Authentication.
   </p>
 
   <p>
-    We do not request or store your Google account password.
+    An authentication credential is used to establish your secure Orbit Switch
+    session. Supabase Authentication may maintain account information necessary
+    to provide authentication services, including a unique user identifier and
+    information associated with the selected authentication provider.
   </p>
 
+  <p>
+    Orbit Switch does not request, collect, or store your Google account password.
+    Orbit Switch gameplay profiles do not store or publicly display your Google
+    email address or real name.
+  </p>
+
+
   <h3>Player Callsign / Username</h3>
+
   <p>
     If you create a cloud-connected profile, you may choose a player Callsign
     or Username. Your selected Callsign may be displayed publicly on Global
@@ -429,36 +407,48 @@
 
   <div class="highlight">
     Please do not use sensitive personal information, such as your real name,
-    address, phone number, or other private information, as your public Callsign.
+    address, phone number, email address, or other private information, as your
+    public Callsign.
   </div>
+
 
   <h3>Gameplay and Progress Data</h3>
 
   <p>
     We may store gameplay-related information necessary to provide game
-    functionality, cloud synchronization, and leaderboard features.
+    functionality, cloud synchronization, progression, and leaderboard features.
   </p>
 
   <div class="data-grid">
+
     <div class="data-box">
       <h3>Progress</h3>
-      <p>Player level, XP, legend stars, campaign progress and stage stars.</p>
+      <p>
+        Player level, total XP, legend stars, campaign progress and stage stars.
+      </p>
     </div>
 
     <div class="data-box">
       <h3>Scores</h3>
-      <p>High scores, rankings and gameplay statistics.</p>
+      <p>
+        High scores and information used for player rankings.
+      </p>
     </div>
 
     <div class="data-box">
       <h3>Game Items</h3>
-      <p>Virtual currency, unlocked cosmetics and equipped items.</p>
+      <p>
+        Virtual currency, unlocked cosmetic items and cosmetic rental information.
+      </p>
     </div>
 
     <div class="data-box">
       <h3>Game Systems</h3>
-      <p>Daily rewards, quests, streaks and power-up progression.</p>
+      <p>
+        Daily streak information and power-up progression.
+      </p>
     </div>
+
   </div>
 </section>
 
@@ -472,10 +462,10 @@
   </p>
 
   <ul>
-    <li>Real name</li>
+    <li>Real name for gameplay profiles</li>
     <li>Phone number</li>
     <li>Physical address</li>
-    <li>Precise or approximate location</li>
+    <li>Precise device location</li>
     <li>Contacts or address book</li>
     <li>Photos or videos</li>
     <li>Files stored on your device</li>
@@ -487,6 +477,11 @@
     <li>Device IMEI, serial number, or MAC address</li>
     <li>Health information</li>
   </ul>
+
+  <div class="highlight">
+    Authentication providers and backend infrastructure providers may process
+    limited technical or account information necessary to provide their services.
+  </div>
 </section>
 
 
@@ -498,7 +493,7 @@
     Signing in is optional for core gameplay.
   </p>
 
-  <p>Google Sign-In is used to:</p>
+  <p>Google Sign-In may be used to:</p>
 
   <ul>
     <li>Authenticate the player</li>
@@ -508,7 +503,9 @@
   </ul>
 
   <p>
-    Orbit Switch does not collect or store your Google account password.
+    Orbit Switch uses Supabase Authentication to manage authentication sessions.
+    Your Orbit Switch gameplay profile uses a unique account identifier and does
+    not publicly display your Google email address or real name.
   </p>
 </section>
 
@@ -542,8 +539,8 @@
   <h2>6. Global Leaderboards</h2>
 
   <p>
-    If you choose to participate in Global Leaderboards, certain gameplay
-    information may be visible to other players.
+    If you choose to create a cloud-connected profile and participate in Global
+    Leaderboards, certain gameplay information may be visible to other players.
   </p>
 
   <p>Public leaderboard information may include:</p>
@@ -556,11 +553,11 @@
     <li>High score</li>
     <li>Total XP</li>
     <li>Player tier or rank title</li>
-    <li>Game statistic update date</li>
   </ul>
 
   <p>
-    Authentication credentials and passwords are not publicly displayed.
+    Your authentication credentials, session tokens, Google password, and Google
+    email address are not displayed on the Orbit Switch leaderboard.
   </p>
 </section>
 
@@ -574,8 +571,8 @@
   </p>
 
   <p>
-    Guest gameplay data may be stored locally on your device and may be lost
-    if the App is uninstalled, app storage is cleared, or local game data is reset.
+    Guest gameplay data may be stored locally on your device and may be lost if
+    the App is uninstalled, app storage is cleared, or local game data is reset.
   </p>
 </section>
 
@@ -593,7 +590,7 @@
   <h3>Supabase</h3>
 
   <p>
-    Orbit Switch uses Supabase services for backend functionality, including:
+    Orbit Switch uses Supabase backend services for functionality including:
   </p>
 
   <ul>
@@ -604,6 +601,11 @@
     <li>Global Leaderboard functionality</li>
     <li>Database storage</li>
   </ul>
+
+  <p>
+    These service providers may process information necessary to operate their
+    respective authentication and infrastructure services.
+  </p>
 </section>
 
 
@@ -628,8 +630,9 @@
   </ul>
 
   <p>
-    If future versions introduce new data collection, analytics, advertising,
-    or tracking technologies, this Privacy Policy may be updated accordingly.
+    If future versions introduce new advertising, analytics, tracking, or
+    additional data collection practices, this Privacy Policy will be updated
+    as appropriate.
   </p>
 </section>
 
@@ -639,12 +642,12 @@
 
   <p>
     Gameplay information and necessary application settings may be stored
-    locally in the App's private storage.
+    locally in the App's private device storage.
   </p>
 
   <p>
-    Cloud-connected account and supported gameplay information may be stored
-    using Supabase backend infrastructure.
+    Cloud-connected account information and supported gameplay data may be
+    stored using Supabase backend infrastructure.
   </p>
 
   <p>We use reasonable technical measures including:</p>
@@ -653,14 +656,15 @@
     <li>HTTPS/TLS encrypted communication</li>
     <li>Private application storage</li>
     <li>Authentication-based access controls</li>
+    <li>Row-level database security controls where applicable</li>
     <li>Session management</li>
-    <li>Authentication token removal during sign-out</li>
-    <li>Backend security controls</li>
+    <li>Authentication token removal during sign-out and account deletion</li>
+    <li>Backend access controls</li>
   </ul>
 
   <div class="highlight">
-    While we take reasonable measures to protect information, no internet
-    transmission or electronic storage method can guarantee absolute security.
+    While we take reasonable measures to protect information, no method of
+    internet transmission or electronic storage can guarantee absolute security.
   </div>
 </section>
 
@@ -669,19 +673,30 @@
   <h2>11. Data Retention</h2>
 
   <p>
-    We retain information for as long as reasonably necessary to provide
-    Orbit Switch functionality and maintain an active account, unless longer
-    retention is necessary for legitimate purposes such as security,
-    fraud prevention, system integrity, disaster recovery, or legal obligations.
+    We retain cloud-connected account and gameplay information for as long as
+    reasonably necessary to provide Orbit Switch functionality and maintain an
+    active account, unless longer retention is necessary for legitimate purposes
+    such as security, fraud prevention, system integrity, disaster recovery, or
+    legal obligations.
   </p>
 
   <p>
     When you permanently delete your Orbit Switch account through the in-app
-    Account Deletion feature, the App initiates deletion of the associated
-    cloud account and application profile data. Following successful deletion,
-    the App also clears associated local authentication session information
-    and local application data.
+    Account Deletion feature, the associated production account and application
+    profile records are deleted from the active database following successful
+    processing of the deletion request.
   </p>
+
+  <p>
+    Associated local authentication session information and local application
+    data are also cleared by the App after successful account deletion.
+  </p>
+
+  <div class="highlight">
+    Production records are removed from the active database following successful
+    deletion. Residual copies that may exist in routine disaster recovery backups
+    are overwritten or expire according to applicable backup retention schedules.
+  </div>
 </section>
 
 
@@ -702,8 +717,8 @@
   </ul>
 
   <p>
-    To permanently remove your account and associated data, use the
-    Account Deletion feature.
+    To permanently remove your cloud account and associated application data,
+    use the Account Deletion feature.
   </p>
 </section>
 
@@ -728,10 +743,18 @@
 
   <p>
     A confirmation step is displayed before permanent deletion is initiated.
+    Following successful deletion, the cloud-connected profile and associated
+    authentication account records are removed from the active production
+    database, and the App clears associated local session and application data.
   </p>
 
   <p>
-    You can also find additional account deletion information through our
+    Deleting your Orbit Switch account does not delete or otherwise affect
+    your Google Account.
+  </p>
+
+  <p>
+    You can also find additional account deletion instructions through our
     external Account Deletion page.
   </p>
 
@@ -765,9 +788,9 @@
   <h2>15. Changes to This Privacy Policy</h2>
 
   <p>
-    We may update this Privacy Policy from time to time due to changes in
-    App functionality, data practices, service providers, or applicable
-    legal requirements.
+    We may update this Privacy Policy from time to time due to changes in App
+    functionality, data practices, service providers, or applicable legal
+    requirements.
   </p>
 
   <p>
