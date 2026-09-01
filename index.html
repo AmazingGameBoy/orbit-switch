@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Privacy Policy | Orbit Switch</title>
+  <meta name="description" content="Official Privacy Policy for Orbit Switch. Learn how we handle account information, gameplay data, cloud saves, and account deletion.">
+
+  <style>
+    :root {
+      --bg: #070b14;
+      --surface: #0e1525;
+      --surface-light: #151f33;
+      --border: rgba(255, 255, 255, 0.09);
+      --text: #f5f7ff;
+      --muted: #aab4c8;
+      --primary: #7c5cff;
+      --primary-light: #a995ff;
+      --cyan: #32d6ff;
+      --danger: #ff5c7a;
+      --max-width: 920px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 15% 0%, rgba(124, 92, 255, 0.16), transparent 30%),
+        radial-gradient(circle at 85% 20%, rgba(50, 214, 255, 0.10), transparent 28%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--cyan);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      border-bottom: 1px solid var(--border);
+      background: rgba(7, 11, 20, 0.75);
+      backdrop-filter: blur(14px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .navbar {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--text);
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: 0.5px;
+    }
+
+    .logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--primary), var(--cyan));
+      color: white;
+      font-weight: 900;
+      box-shadow: 0 0 30px rgba(124, 92, 255, 0.35);
+    }
+
+    .nav-link {
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 80px 0 45px;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(124, 92, 255, 0.35);
+      background: rgba(124, 92, 255, 0.10);
+      color: var(--primary-light);
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 20px 0 12px;
+      font-size: clamp(2.1rem, 6vw, 4.2rem);
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: clamp(0.95rem, 2vw, 1.08rem);
+    }
+
+    .dates {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .date-item {
+      padding: 8px 13px;
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 10px;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    /* Content */
+    main {
+      padding-bottom: 70px;
+    }
+
+    .card {
+      background: linear-gradient(
+        180deg,
+        rgba(21, 31, 51, 0.92),
+        rgba(14, 21, 37, 0.92)
+      );
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: clamp(22px, 5vw, 42px);
+      margin-bottom: 20px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: clamp(1.35rem, 3vw, 1.7rem);
+      letter-spacing: -0.4px;
+    }
+
+    h3 {
+      margin-top: 28px;
+      font-size: 1.05rem;
+      color: var(--primary-light);
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    strong {
+      color: var(--text);
+    }
+
+    ul {
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    .highlight {
+      border-left: 3px solid var(--primary);
+      background: rgba(124, 92, 255, 0.07);
+      padding: 16px 18px;
+      border-radius: 0 12px 12px 0;
+      margin: 18px 0;
+      color: var(--muted);
+    }
+
+    .data-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .data-box {
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.025);
+      padding: 16px;
+      border-radius: 14px;
+    }
+
+    .data-box h3 {
+      margin: 0 0 7px;
+      font-size: 0.95rem;
+    }
+
+    .data-box p {
+      margin: 0;
+      font-size: 0.88rem;
+    }
+
+    /* Deletion CTA */
+    .deletion-card {
+      border: 1px solid rgba(255, 92, 122, 0.35);
+      background:
+        radial-gradient(circle at top right, rgba(255, 92, 122, 0.12), transparent 35%),
+        rgba(255, 92, 122, 0.04);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 8px;
+      padding: 13px 20px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--danger), #ff7a5c);
+      color: white;
+      font-weight: 800;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(255, 92, 122, 0.25);
+      text-decoration: none;
+    }
+
+    /* Table */
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 18px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 560px;
+    }
+
+    th,
+    td {
+      padding: 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    th {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 35px 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    footer strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    /* Mobile */
+    @media (max-width: 640px) {
+      .navbar {
+        min-height: 62px;
+      }
+
+      .nav-link {
+        font-size: 0.8rem;
+      }
+
+      .hero {
+        padding: 55px 0 30px;
+      }
+
+      .card {
+        border-radius: 16px;
+      }
+
+      .data-grid {
+        grid-template-columns: 1fr;
+      }
+
+      ul {
+        padding-left: 18px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .brand span {
+        font-size: 0.95rem;
+      }
+
+      .logo {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+<header>
+  <div class="container navbar">
+    <div class="brand">
+      <div class="logo">OS</div>
+      <span>ORBIT SWITCH</span>
+    </div>
+
+```
+<a href="delete-account.html" class="nav-link">
+  Delete Account
+</a>
+```
+
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <div class="badge">OFFICIAL PRIVACY POLICY</div>
+
+```
+  <h1>Your Privacy Matters.</h1>
+
+  <p>
+    This Privacy Policy explains how Orbit Switch handles account information,
+    gameplay data, cloud synchronization, leaderboards, and account deletion.
+  </p>
+
+  <div class="dates">
+    <div class="date-item">Effective: September 1, 2026</div>
+    <div class="date-item">Last Updated: September 1, 2026</div>
+  </div>
+</div>
+```
+
+  </section>
+
+  <div class="container">
+
+```
+<section class="card">
+  <h2>1. Introduction</h2>
+
+  <p>
+    Welcome to <strong>Orbit Switch</strong> ("we," "us," "our," or "the App").
+    We respect your privacy and are committed to being transparent about how
+    information is handled when you use Orbit Switch.
+  </p>
+
+  <p>
+    This Privacy Policy explains what information is collected, how it is used,
+    where it may be stored, when certain information may be publicly displayed,
+    and how you can delete your account and associated data.
+  </p>
+
+  <div class="highlight">
+    Orbit Switch follows a data-minimization approach. Core gameplay is available
+    in Guest Mode without requiring a cloud-connected account.
+  </div>
+</section>
+
+
+<section class="card">
+  <h2>2. Information We Collect</h2>
+
+  <h3>Account Identifier</h3>
+  <p>
+    If you voluntarily sign in using Google Sign-In, authentication is handled
+    through Google Identity services and Supabase Authentication. We use an
+    authenticated user identifier to operate your Orbit Switch cloud account.
+  </p>
+
+  <p>
+    We do not request or store your Google account password.
+  </p>
+
+  <h3>Player Callsign / Username</h3>
+  <p>
+    If you create a cloud-connected profile, you may choose a player Callsign
+    or Username. Your selected Callsign may be displayed publicly on Global
+    Leaderboards.
+  </p>
+
+  <div class="highlight">
+    Please do not use sensitive personal information, such as your real name,
+    address, phone number, or other private information, as your public Callsign.
+  </div>
+
+  <h3>Gameplay and Progress Data</h3>
+
+  <p>
+    We may store gameplay-related information necessary to provide game
+    functionality, cloud synchronization, and leaderboard features.
+  </p>
+
+  <div class="data-grid">
+    <div class="data-box">
+      <h3>Progress</h3>
+      <p>Player level, XP, legend stars, campaign progress and stage stars.</p>
+    </div>
+
+    <div class="data-box">
+      <h3>Scores</h3>
+      <p>High scores, rankings and gameplay statistics.</p>
+    </div>
+
+    <div class="data-box">
+      <h3>Game Items</h3>
+      <p>Virtual currency, unlocked cosmetics and equipped items.</p>
+    </div>
+
+    <div class="data-box">
+      <h3>Game Systems</h3>
+      <p>Daily rewards, quests, streaks and power-up progression.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="card">
+  <h2>3. Information We Do Not Intentionally Collect</h2>
+
+  <p>
+    Based on the current functionality of Orbit Switch, we do not intentionally
+    collect the following categories of information directly through the App:
+  </p>
+
+  <ul>
+    <li>Real name</li>
+    <li>Phone number</li>
+    <li>Physical address</li>
+    <li>Precise or approximate location</li>
+    <li>Contacts or address book</li>
+    <li>Photos or videos</li>
+    <li>Files stored on your device</li>
+    <li>Camera data</li>
+    <li>Microphone recordings</li>
+    <li>SMS messages or call logs</li>
+    <li>Payment card information</li>
+    <li>Advertising ID for advertising purposes</li>
+    <li>Device IMEI, serial number, or MAC address</li>
+    <li>Health information</li>
+  </ul>
+</section>
+
+
+<section class="card">
+  <h2>4. Optional Google Sign-In</h2>
+
+  <p>
+    Orbit Switch allows users to optionally sign in using Google Sign-In.
+    Signing in is optional for core gameplay.
+  </p>
+
+  <p>Google Sign-In is used to:</p>
+
+  <ul>
+    <li>Authenticate the player</li>
+    <li>Access a cloud-connected Orbit Switch account</li>
+    <li>Synchronize supported gameplay progress</li>
+    <li>Enable Global Leaderboard participation</li>
+  </ul>
+
+  <p>
+    Orbit Switch does not collect or store your Google account password.
+  </p>
+</section>
+
+
+<section class="card">
+  <h2>5. How We Use Information</h2>
+
+  <p>Information is used to:</p>
+
+  <ul>
+    <li>Provide and operate Orbit Switch</li>
+    <li>Authenticate cloud-connected accounts</li>
+    <li>Synchronize supported gameplay progress</li>
+    <li>Maintain player profiles</li>
+    <li>Operate Global Leaderboards</li>
+    <li>Calculate player rankings</li>
+    <li>Maintain game progression</li>
+    <li>Protect account security and system integrity</li>
+    <li>Process account deletion requests</li>
+    <li>Respond to support inquiries</li>
+  </ul>
+
+  <div class="highlight">
+    We do not sell, rent, or trade personal information. Orbit Switch does not
+    currently use personal information for targeted advertising.
+  </div>
+</section>
+
+
+<section class="card">
+  <h2>6. Global Leaderboards</h2>
+
+  <p>
+    If you choose to participate in Global Leaderboards, certain gameplay
+    information may be visible to other players.
+  </p>
+
+  <p>Public leaderboard information may include:</p>
+
+  <ul>
+    <li>Player Callsign or Username</li>
+    <li>Global ranking</li>
+    <li>Current level</li>
+    <li>Legend stars</li>
+    <li>High score</li>
+    <li>Total XP</li>
+    <li>Player tier or rank title</li>
+    <li>Game statistic update date</li>
+  </ul>
+
+  <p>
+    Authentication credentials and passwords are not publicly displayed.
+  </p>
+</section>
+
+
+<section class="card">
+  <h2>7. Guest Mode</h2>
+
+  <p>
+    Orbit Switch can be played without creating a cloud-connected account.
+    Guest Mode allows access to core gameplay without Google authentication.
+  </p>
+
+  <p>
+    Guest gameplay data may be stored locally on your device and may be lost
+    if the App is uninstalled, app storage is cleared, or local game data is reset.
+  </p>
+</section>
+
+
+<section class="card">
+  <h2>8. Third-Party Services</h2>
+
+  <h3>Google Identity Services</h3>
+
+  <p>
+    Google authentication services are used only when a player voluntarily
+    chooses to sign in with Google.
+  </p>
+
+  <h3>Supabase</h3>
+
+  <p>
+    Orbit Switch uses Supabase services for backend functionality, including:
+  </p>
+
+  <ul>
+    <li>User authentication</li>
+    <li>Account sessions</li>
+    <li>Cloud-connected player profiles</li>
+    <li>Gameplay synchronization</li>
+    <li>Global Leaderboard functionality</li>
+    <li>Database storage</li>
+  </ul>
+</section>
+
+
+<section class="card">
+  <h2>9. Advertising and Tracking</h2>
+
+  <p>
+    The current version of Orbit Switch does not intentionally include:
+  </p>
+
+  <ul>
+    <li>Third-party advertising networks</li>
+    <li>Personalized advertising</li>
+    <li>Behavioral advertising</li>
+    <li>Advertising SDKs</li>
+    <li>Firebase Analytics</li>
+    <li>Mixpanel</li>
+    <li>AppsFlyer</li>
+    <li>Adjust</li>
+    <li>Sentry</li>
+    <li>Cross-app behavioral tracking</li>
+  </ul>
+
+  <p>
+    If future versions introduce new data collection, analytics, advertising,
+    or tracking technologies, this Privacy Policy may be updated accordingly.
+  </p>
+</section>
+
+
+<section class="card">
+  <h2>10. Data Storage and Security</h2>
+
+  <p>
+    Gameplay information and necessary application settings may be stored
+    locally in the App's private storage.
+  </p>
+
+  <p>
+    Cloud-connected account and supported gameplay information may be stored
+    using Supabase backend infrastructure.
+  </p>
+
+  <p>We use reasonable technical measures including:</p>
+
+  <ul>
+    <li>HTTPS/TLS encrypted communication</li>
+    <li>Private application storage</li>
+    <li>Authentication-based access controls</li>
+    <li>Session management</li>
+    <li>Authentication token removal during sign-out</li>
+    <li>Backend security controls</li>
+  </ul>
+
+  <div class="highlight">
+    While we take reasonable measures to protect information, no internet
+    transmission or electronic storage method can guarantee absolute security.
+  </div>
+</section>
+
+
+<section class="card">
+  <h2>11. Data Retention</h2>
+
+  <p>
+    We retain information for as long as reasonably necessary to provide
+    Orbit Switch functionality and maintain an active account, unless longer
+    retention is necessary for legitimate purposes such as security,
+    fraud prevention, system integrity, disaster recovery, or legal obligations.
+  </p>
+</section>
+
+
+<section class="card">
+  <h2>12. Sign Out</h2>
+
+  <p>
+    Signing out is different from deleting an account.
+  </p>
+
+  <p>When you sign out:</p>
+
+  <ul>
+    <li>Your local authentication session is cleared</li>
+    <li>Locally stored authentication tokens are removed</li>
+    <li>Local application data may be reset according to App functionality</li>
+    <li>Your cloud account is not automatically deleted</li>
+  </ul>
+
+  <p>
+    To permanently remove your account and associated data, use the
+    Account Deletion feature.
+  </p>
+</section>
+
+
+<section class="card deletion-card">
+  <h2>13. Account and Data Deletion</h2>
+
+  <p>
+    You can permanently delete your Orbit Switch account and associated
+    application data.
+  </p>
+
+  <h3>In-App Deletion</h3>
+
+  <p>
+    Authenticated users can delete their account directly through:
+  </p>
+
+  <div class="highlight">
+    <strong>Settings → Delete Account & Data</strong>
+  </div>
+
+  <p>
+    A confirmation step is displayed before permanent deletion is initiated.
+  </p>
+
+  <p>
+    You can also request account deletion through our external Account
+    Deletion page.
+  </p>
+
+  <a href="delete-account.html" class="button">
+    View Account Deletion Information
+  </a>
+</section>
+
+
+<section class="card">
+  <h2>14. Children's Privacy</h2>
+
+  <p>
+    Orbit Switch is designed as a general-audience game. We do not knowingly
+    request unnecessary sensitive personal information from children.
+  </p>
+
+  <p>
+    Users should avoid including personally identifying information in public
+    Callsigns or Usernames.
+  </p>
+</section>
+
+
+<section class="card">
+  <h2>15. Changes to This Privacy Policy</h2>
+
+  <p>
+    We may update this Privacy Policy from time to time due to changes in
+    App functionality, data practices, service providers, or applicable
+    legal requirements.
+  </p>
+
+  <p>
+    When changes are made, the "Last Updated" date at the top of this page
+    will be revised.
+  </p>
+</section>
+
+
+<section class="card">
+  <h2>16. Contact Us</h2>
+
+  <p>
+    If you have questions, concerns, privacy requests, or account deletion
+    requests, please contact:
+  </p>
+
+  <p>
+    <strong>Orbit Switch Team</strong><br>
+    Email:
+    <a href="mailto:hellohello132qwer@gmail.com">
+      hellohello132qwer@gmail.com
+    </a>
+  </p>
+</section>
+```
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <strong>Orbit Switch</strong>
+    Privacy & Data Information<br>
+    © 2026 Orbit Switch Team. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
